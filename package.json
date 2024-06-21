@@ -1,0 +1,30 @@
+{
+  "name": "d4toolbox",
+  "productName": "D4 Toolbox",
+  "version": "1.0.0",
+  "description": "Multiple resources to make playing Diablo 4 easier.",
+  "main": "index.js",
+  "repository": "https://github.com/DavidKDean/D4Toolbox",
+  "author": "David Kirby Dean",
+  "license": "UNLICENSED",
+  "icon": "img/icons/icon.ico",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^28.0.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^3.0.0"
+  }
+}

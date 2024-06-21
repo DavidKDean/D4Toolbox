@@ -1,0 +1,34 @@
+{
+    "altars": [
+        {
+            "region": "Fractured Peaks",
+            "name": "Desolate Highlands Altar of Lilith #1",
+            "map1": "img/altar-of-lilith/fractured-peaks/01-map.webp",
+            "map2": "img/altar-of-lilith/fractured-peaks/01-in_game.webp",
+            "zone": "Desolate Highlands",
+            "area": "Icehowl Taiga",
+            "reward": "Dexterity +2",
+            "onclick": "showHideFracturedPeaksAltarOfLilith01"
+        },
+        {
+            "region": "Fractured Peaks",
+            "name": "Desolate Highlands Altar of Lilith #2",
+            "map1": "img/altar-of-lilith/fractured-peaks/02-map.webp",
+            "map2": "img/altar-of-lilith/fractured-peaks/02-in_game.webp",
+            "zone": "Desolate Highlands",
+            "area": "Icehowl Taiga",
+            "reward": "Strength +2",
+            "onclick": "showHideFracturedPeaksAltarOfLilith02"
+        },
+        {
+            "region": "Fractured Peaks",
+            "name": "Desolate Highlands Altar of Lilith #3",
+            "map1": "img/altar-of-lilith/fractured-peaks/03-map.webp",
+            "map2": "img/altar-of-lilith/fractured-peaks/03-in_game.webp",
+            "zone": "Desolate Highlands",
+            "area": "Eastern Pass",
+            "reward": "Dexterity +2",
+            "onclick": "showHideFracturedPeaksAltarOfLilith03"
+        }
+    ]
+};

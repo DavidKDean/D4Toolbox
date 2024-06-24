@@ -8,40 +8,56 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- JS -->
-    <script type="text/javascript" defer src="js/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" defer src="js/main.js"></script>
+    <script type="text/javascript" defer src="./js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" defer src="./json/FracturedPeaksAltars.js"></script>
+    <script type="text/javascript" defer src="./js/main.js"></script>
 </head>
 
 <body>
-
-    <br>
-    <hr>
-    <button type="button" class="accordion"><img src="img/icons/MinimapIcon_Waypoint.webp"></img></button>
-    <hr>
-    <button type="button" class="accordion"><img src="img/icons/MinimapIcon_LilithAltar.webp"></img></button>
-    <div class="accordion-container">
-        <div id="display-data"></div>
-        <button id="fracturedPeaksAltarMap">Fractured Peaks</button>
-        <button id="scosglenAltarMap">Scosglen</button>
-        <button id="drySteppesAltarMap">Dry Steppes</button>
-        <button id="hawezarAltarMap">Hawezar</button>
-        <button id="kehjistanAltarMap">Kehjistan</button>
-        <div id="fracturedPeaksLilithAltars"></div>
-        <div id="scosglenLilithAltars"></div>
-        <div id="drySteppesLilithAltars"></div>
-        <div id="hawezarLilithAltars"></div>
-        <div id="kehjistanLilithAltars"></div>
-    </div>
-    <hr>
-    <button type="button" class="accordion"><img src="img/icons/MinimapIcon_Cellar.webp"></img></button>
-    <hr>
-    <button type="button" class="accordion"><img src="img/icons/MinimapIcon_Dungeon.webp"></img></button>
-    <hr>
-    <div class="colorTheme-container">
-        <button type="button" class="theme" onclick="darkMode()">DarkMode</button>
-        <button type="button" class="theme" onclick="lightMode()">LightMode</button>
-    </div>
-
+    <main>
+        <form id="UI">
+            <div class="button-container" id="topButtonBar">
+                <input type="button" id="saveStorageID" value="Save Data" onclick="saveStorage()" />
+                <input type="button" id="clearStorageID" value="Clear Data" onclick="clearStorage()" />
+            </div>
+            <br>
+            <hr>
+            <button type="button" class="accordion"><img src="img/icons/icon_waypoint.webp"></img></button>
+            <hr>
+            <button type="button" class="accordion"><img src="img/icons/icon_lilithAltar.webp"></img></button>
+            <div class="accordion-container">
+                <!-- Overlay -->
+                <div id="display-data"></div>
+                <div id="overlay"></div>
+                <div id="overlayContent">
+                    <img id="bigImg" src="" alt="" />
+                </div>
+                <!-- Region Buttons -->
+                <div class="button-container">
+                    <button type="button" id="fracturedPeaksAltarMap">Fractured Peaks</button>
+                    <button type="button" id="scosglenAltarMap">Scosglen</button>
+                    <button type="button" id="drySteppesAltarMap">Dry Steppes</button>
+                    <button type="button" id="hawezarAltarMap">Hawezar</button>
+                    <button type="button" id="kehjistanAltarMap">Kehjistan</button>
+                </div>
+                <!-- JSON Data for Each Region -->
+                <div id="fracturedPeaksLilithAltars"></div>
+                <div id="scosglenLilithAltars"></div>
+                <div id="drySteppesLilithAltars"></div>
+                <div id="hawezarLilithAltars"></div>
+                <div id="kehjistanLilithAltars"></div>
+            </div>
+            <hr>
+            <button type="button" class="accordion"><img src="img/icons/icon_cellar.webp"></img></button>
+            <hr>
+            <button type="button" class="accordion"><img src="img/icons/icon_dungeon.webp"></img></button>
+            <hr>
+            <div class="colorTheme-container">
+                <!-- <button type="button" class="theme" id="changeTheme" onclick="changeTheme()">Change Theme</button> -->
+                <button type="button" class="theme" id="changeThemeID">Change Theme</button>
+            </div>
+        </form>
+    </main>
 </body>
 
 </html>

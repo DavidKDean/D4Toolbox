@@ -1,19 +1,30 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron');
+const electron = require('electron');
+const url = require('url');
 const path = require('path');
+const fs = require("fs");
+const { app, BrowserWindow, Menu, ipcMain } = electron;
+
+// Set ENV
+process.env.NODE_ENV = 'production';
+
+let mainWindow;
 
 function createWindow() {
+
 	// Create the browser window.
 	const mainWindow = new BrowserWindow({
-		icon: path.join(__dirname, 'img/icons/icon.ico'),
+		icon: path.join(__dirname, './img/icons/icon.ico'),
 		title: 'D4 Toolbox',
 		width: 1000,
 		height: 900,
-		resizable: false,
+		resizable: true,
 		frame: true,
 		webPreferences: {
-			preload: path.join(__dirname, 'js/preload.js'),
-			nodeIntegration: false,
+			preload: path.join(__dirname, './js/preload.js'),
+			nodeIntegration: true,
+			sandbox: false,
+			enableRemoteModule: true,
 		},
 	});
 
@@ -21,10 +32,15 @@ function createWindow() {
 	mainWindow.setMenuBarVisibility(true);
 
 	// and load the index.html of the app.
-	mainWindow.loadFile('index.html');
+	mainWindow.loadFile('./index.html');
 
 	// Open the DevTools.
 	// mainWindow.webContents.openDevTools()
+
+	// Build Menu from Template
+	const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+	// Insert Menu
+	Menu.setApplicationMenu(mainMenu);
 }
 
 // This method will be called when Electron has finished
@@ -46,6 +62,44 @@ app.whenReady().then(() => {
 app.on('window-all-closed', function () {
 	if (process.platform !== 'darwin') app.quit();
 });
+
+// Create Menu Template
+const mainMenuTemplate = [
+	{
+		label: 'File',
+		submenu: [
+			{
+				label: 'Patches'
+			},
+			{
+				label: 'Exit',
+				accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+				click() {
+					app.quit();
+				}
+			}
+		]
+	}
+];
+
+// Add DevTools if not in Production
+if (process.env.NODE_ENV !== 'production') {
+	mainMenuTemplate.push({
+		label: 'DevTools',
+		submenu: [
+			{
+				label: 'Toggle DevTools',
+				accelerator: process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
+				click(item, focusedWindow) {
+					focusedWindow.toggleDevTools();
+				}
+			},
+			{
+				role: 'reload'
+			}
+		]
+	});
+}
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.

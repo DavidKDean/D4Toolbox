@@ -1,4 +1,7 @@
-const altarData = [
+// ===============================
+// Start: JSON Data
+// ===============================
+const fractPeaksAltarDat = [
     {
         "number": "01",
         "name": "Desolate Highlands Altar of Lilith #1",
@@ -8,9 +11,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/01-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/01-in_game.webp",
         "reward": "+2 Dexterity",
-        "dataID": "fractPeaksAltar01",
-        "dataIDChecked": "fractPeaksAltar01_checked",
-        "onCheckMark": "document.getElementById('fractPeaksAltar01').classList.toggle('hide')",
+        "altarID": "fractPeaksAltar01",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar01').classList.toggle('hide')",
     },
     {
         "number": "02",
@@ -21,9 +24,10 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/02-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/02-in_game.webp",
         "reward": "+2 Intelligence",
-        "dataID": "fractPeaksAltar02",
-        "dataIDChecked": "fractPeaksAltar02_checked",
-        "onCheckMark": "document.getElementById('fractPeaksAltar02').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar02",
+        "altarDataID": "",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar02').classList.toggle('hide')"
     },
     {
         "number": "03",
@@ -34,9 +38,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/03-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/03-in_game.webp",
         "reward": "+2 Dexterity",
-        "dataID": "fractPeaksAltar03",
-        "dataIDChecked": "fractPeaksAltar03_checked",
-        "onCheckMark": "document.getElementById('fractPeaksAltar03').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar03",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar03').classList.toggle('hide')"
     },
     {
         "number": "04",
@@ -47,9 +51,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/04-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/04-in_game.webp",
         "reward": "+2 Strength",
-        "dataID": "fractPeaksAltar04",
-        "dataIDChecked": "fractPeaksAltar04_checked",
-        "onCheckMark": "document.getElementById('fractPeaksAltar04').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar04",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar04').classList.toggle('hide')"
     },
     {
         "number": "05",
@@ -60,9 +64,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/05-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/05-in_game.webp",
         "reward": "+2 Willpower",
-        "dataID": "fractPeaksAltar05",
-        "dataIDChecked": "fractPeaksAltar05_checked",
-        "onCheckMark": "document.getElementById('fractPeaksAltar05').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar05",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar05').classList.toggle('hide')"
     },
     {
         "number": "06",
@@ -73,8 +77,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/06-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/06-in_game.webp",
         "reward": "+5 Max Murmuring Obols",
-        "dataID": "fractPeaksAltar06",
-        "onCheckMark": "document.getElementById('fractPeaksAltar06').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar06",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar06').classList.toggle('hide')"
     },
     {
         "number": "07",
@@ -85,8 +90,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/07-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/07-in_game.webp",
         "reward": "+2 Strength",
-        "dataID": "fractPeaksAltar07",
-        "onCheckMark": "document.getElementById('fractPeaksAltar07').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar07",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar07').classList.toggle('hide')"
     },
     {
         "number": "08",
@@ -97,8 +103,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/08-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/08-in_game.webp",
         "reward": "+2 Strength",
-        "dataID": "fractPeaksAltar08",
-        "onCheckMark": "document.getElementById('fractPeaksAltar08').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar08",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar08').classList.toggle('hide')"
     },
     {
         "number": "09",
@@ -109,8 +116,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/09-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/09-in_game.webp",
         "reward": "+2 Intelligence",
-        "dataID": "fractPeaksAltar09",
-        "onCheckMark": "document.getElementById('fractPeaksAltar09').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar09",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar09').classList.toggle('hide')"
     },
     {
         "number": "10",
@@ -121,8 +129,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/10-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/10-in_game.webp",
         "reward": "+5 Max Murmuring Obols",
-        "dataID": "fractPeaksAltar10",
-        "onCheckMark": "document.getElementById('fractPeaksAltar10').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar10",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar10').classList.toggle('hide')"
     },
     {
         "number": "11",
@@ -133,8 +142,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/11-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/11-in_game.webp",
         "reward": "+2 Willpower",
-        "dataID": "fractPeaksAltar11",
-        "onCheckMark": "document.getElementById('fractPeaksAltar11').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar11",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar11').classList.toggle('hide')"
     },
     {
         "number": "12",
@@ -145,8 +155,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/12-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/12-in_game.webp",
         "reward": "+2 Dexterity",
-        "dataID": "fractPeaksAltar12",
-        "onCheckMark": "document.getElementById('fractPeaksAltar12').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar12",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar12').classList.toggle('hide')"
     },
     {
         "number": "13",
@@ -157,8 +168,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/13-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/13-in_game.webp",
         "reward": "+2 Intelligence",
-        "dataID": "fractPeaksAltar13",
-        "onCheckMark": "document.getElementById('fractPeaksAltar13').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar13",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar13').classList.toggle('hide')"
     },
     {
         "number": "14",
@@ -169,8 +181,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/14-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/14-in_game.webp",
         "reward": "+2 Willpower",
-        "dataID": "fractPeaksAltar14",
-        "onCheckMark": "document.getElementById('fractPeaksAltar14').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar14",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar14').classList.toggle('hide')"
     },
     {
         "number": "15",
@@ -181,8 +194,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/15-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/15-in_game.webp",
         "reward": "+2 Dexterity",
-        "dataID": "fractPeaksAltar15",
-        "onCheckMark": "document.getElementById('fractPeaksAltar15').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar15",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar15').classList.toggle('hide')"
     },
     {
         "number": "16",
@@ -193,8 +207,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/16-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/16-in_game.webp",
         "reward": "+2 Willpower",
-        "dataID": "fractPeaksAltar16",
-        "onCheckMark": "document.getElementById('fractPeaksAltar16').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar16",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar16').classList.toggle('hide')"
     },
     {
         "number": "17",
@@ -205,8 +220,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/17-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/17-in_game.webp",
         "reward": "+2 Strength",
-        "dataID": "fractPeaksAltar17",
-        "onCheckMark": "document.getElementById('fractPeaksAltar17').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar17",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar17').classList.toggle('hide')"
     },
     {
         "number": "18",
@@ -217,8 +233,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/18-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/18-in_game.webp",
         "reward": "+2 Intelligence",
-        "dataID": "fractPeaksAltar18",
-        "onCheckMark": "document.getElementById('fractPeaksAltar18').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar18",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar18').classList.toggle('hide')"
     },
     {
         "number": "19",
@@ -229,8 +246,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/19-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/19-in_game.webp",
         "reward": "+2 Intelligence",
-        "dataID": "fractPeaksAltar19",
-        "onCheckMark": "document.getElementById('fractPeaksAltar19').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar19",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar19').classList.toggle('hide')"
     },
     {
         "number": "20",
@@ -241,8 +259,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/20-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/20-in_game.webp",
         "reward": "+5 Max Murmuring Obols",
-        "dataID": "fractPeaksAltar20",
-        "onCheckMark": "document.getElementById('fractPeaksAltar20').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar20",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar20').classList.toggle('hide')"
     },
     {
         "number": "21",
@@ -253,8 +272,9 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/21-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/21-in_game.webp",
         "reward": "+2 Strength",
-        "dataID": "fractPeaksAltar21",
-        "onCheckMark": "document.getElementById('fractPeaksAltar21').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar21",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar21').classList.toggle('hide')"
     },
     {
         "number": "22",
@@ -265,12 +285,89 @@ const altarData = [
         "mapImage": "./img/altar-of-lilith/fractured-peaks/map/22-map.webp",
         "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/22-in_game.webp",
         "reward": "+2 Willpower",
-        "dataID": "fractPeaksAltar22",
-        "onCheckMark": "document.getElementById('fractPeaksAltar22').classList.toggle('hide')"
+        "altarID": "fractPeaksAltar22",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar22').classList.toggle('hide')"
+    },
+    {
+        "number": "23",
+        "name": "Seat of the Heavens Altar of Lilith #1",
+        "region": "Fractured Peaks",
+        "subregion": "Seat of the Heavens",
+        "area": "Fields of Judgment",
+        "mapImage": "./img/altar-of-lilith/fractured-peaks/map/23-map.webp",
+        "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/23-in_game.webp",
+        "reward": "+2 Intelligence",
+        "altarID": "fractPeaksAltar23",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar23').classList.toggle('hide')"
+    },
+    {
+        "number": "24",
+        "name": "Seat of the Heavens Altar of Lilith #2",
+        "region": "Fractured Peaks",
+        "subregion": "Seat of the Heavens",
+        "area": "Serac Rapture",
+        "mapImage": "./img/altar-of-lilith/fractured-peaks/map/24-map.webp",
+        "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/24-in_game.webp",
+        "reward": "+2 Strength",
+        "altarID": "fractPeaksAltar24",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar24').classList.toggle('hide')"
+    },
+    {
+        "number": "25",
+        "name": "Seat of the Heavens Altar of Lilith #3",
+        "region": "Fractured Peaks",
+        "subregion": "Seat of the Heavens",
+        "area": "Sinner's Pass",
+        "mapImage": "./img/altar-of-lilith/fractured-peaks/map/25-map.webp",
+        "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/25-in_game.webp",
+        "reward": "+2 Dexterity",
+        "altarID": "fractPeaksAltar25",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar25').classList.toggle('hide')"
+    },
+    {
+        "number": "26",
+        "name": "The Pallid Glade Altar of Lilith #1",
+        "region": "Fractured Peaks",
+        "subregion": "The Pallid Glade",
+        "area": "Frostbite Trails",
+        "mapImage": "./img/altar-of-lilith/fractured-peaks/map/26-map.webp",
+        "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/26-in_game.webp",
+        "reward": "+5 Max Murmuring Obols",
+        "altarID": "fractPeaksAltar26",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar26').classList.toggle('hide')"
+    },
+    {
+        "number": "27",
+        "name": "The Pallid Glade Altar of Lilith #2",
+        "region": "Fractured Peaks",
+        "subregion": "The Pallid Glade",
+        "area": "Melnik's Hill",
+        "mapImage": "./img/altar-of-lilith/fractured-peaks/map/27-map.webp",
+        "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/27-in_game.webp",
+        "reward": "+2 Willpower",
+        "altarID": "fractPeaksAltar27",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar27').classList.toggle('hide')"
+    },
+    {
+        "number": "28",
+        "name": "The Pallid Glade Altar of Lilith #3",
+        "region": "Fractured Peaks",
+        "subregion": "The Pallid Glade",
+        "area": "Sentiers Givrés",
+        "mapImage": "./img/altar-of-lilith/fractured-peaks/map/28-map.webp",
+        "inGameImage": "./img/altar-of-lilith/fractured-peaks/in_game/28-in_game.webp",
+        "reward": "+2 Dexterity",
+        "altarID": "fractPeaksAltar28",
+        "altarDataID": "fractPeaksAltarData01",
+        "onChecked": "document.getElementById('fractPeaksAltar28').classList.toggle('hide')"
     }
 ];
-
-// ===============================
 /* JSON Altar Template
 {
     "number": "",
@@ -281,10 +378,11 @@ const altarData = [
     "mapImage": "",
     "inGameImage": "",
     "reward": "",
-    "dataID": "",
-    "onCheckMark": ""
-}
-*/
+    "altarID": "",
+    "onChecked": ""
+}*/
+// ===============================
+// End: JSON Data
 // ===============================
 
 
@@ -292,20 +390,16 @@ const altarData = [
 
 
 // ===============================
-
-
-
-
-
+// Start: Main Function
 // ===============================
 function altarsTemplate(altar) {
     return `
-            <div class="altar-of-lilith-container" id="${altar.dataID}">
+            <div class="altar-of-lilith-container" id="${altar.altarID}">
 
                 <form id="altarCheckbox">
                     <div class="checkbox-container">
-                        <input type="checkbox" class="altarButtonClass" id="${altar.dataIDChecked}">
-                        <label for="${altar.dataIDChecked}" id="${altar.dataIDChecked}" onclick="${altar.onCheckMark};${altar.hideChecked}">${altar.name}</label>
+                        <input type="checkbox" class="altarButtonClass" id="${altar.altarDataID}">
+                        <label for="${altar.altarDataID}" id="${altar.altarDataID}" onclick="${altar.onChecked}">${altar.name}</label>
                     </div>
                 <form>
 
@@ -344,7 +438,7 @@ function altarsTemplate(altar) {
             `;
 }
 
-document.getElementById("fracturedPeaksLilithAltars").innerHTML = `${altarData.map(altarsTemplate).join('')}`;
+document.getElementById("fracturedPeaksLilithAltars").innerHTML = `${fractPeaksAltarDat.map(altarsTemplate).join('')}`;
 // ===============================
-// End: Fractured Peaks Altars
+// End: Main Function
 // ===============================
